@@ -28,7 +28,7 @@ try
     app.Run();
 }
 catch (Exception ex) {
-    logger.Error(ex, "Stopped program because of exception")
+    logger.Error(ex, "Stopped program because of exception");
 }
 finally {
     LogManager.Shutdown();
