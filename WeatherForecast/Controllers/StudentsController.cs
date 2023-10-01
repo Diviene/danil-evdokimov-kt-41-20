@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using WeatherForecast.Filters.StudentFilters;
-using WeatherForecast.Interfaces.StudentFilters;
+using WeatherForecast.Interfaces.StudentInterfaces;
 
 namespace WeatherForecast.Controllers
 {
@@ -9,20 +9,20 @@ namespace WeatherForecast.Controllers
     public class StudentsController : ControllerBase
     {
         private readonly ILogger<StudentsController> _logger;
-        private readonly IStudentService _studentService;
+        private readonly IGradeService _gradeService;
 
-        public StudentsController(ILogger<StudentsController> logger, IStudentService studentService)
+        public StudentsController(ILogger<StudentsController> logger, IGradeService gradeService)
         { 
         _logger = logger;
-        _studentService = studentService;
+        _gradeService = gradeService;
         }
 
-        [HttpPost(Name = "GetStudentByGroup")]
 
-        public async Task<IActionResult> GetStudentsByGroupAsync(StudentGroupFilter filter, CancellationToken cancellationToken = default)
+        [HttpPost(Name = "GetGradeByStudent")]
+        public async Task<IActionResult> GetGradesByStudentsAsync(StudentGradeFilter filter, CancellationToken cancellationToken = default)
         {
-            var students = await _studentService.GetStudentsByGroupAsync(filter, cancellationToken);
-            return Ok(students);
+            var grades = await _gradeService.GetGradesByStudentsAsync(filter, cancellationToken);
+            return Ok(grades);
         }
     }
 }
