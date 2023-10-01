@@ -28,12 +28,6 @@ namespace Lab3.Database.Configurations
                 .HasColumnName("c_student_groupname")
                 .HasColumnType(ColumnType.String).HasMaxLength(100)
                 .HasComment("Наименование группы");
-
-            builder.Property(p => p.StudentQuantity)
-                .IsRequired()
-                .HasColumnName("c_student_quantity")
-                .HasColumnType(ColumnType.Int)
-                .HasComment("Количество студентов");
         }
     }
 }

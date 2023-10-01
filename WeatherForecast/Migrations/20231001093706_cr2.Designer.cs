@@ -3,6 +3,7 @@ using System;
 using Lab3.Database;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -11,9 +12,11 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace WeatherForecast.Migrations
 {
     [DbContext(typeof(StudentDbContext))]
-    partial class StudentDbContextModelSnapshot : ModelSnapshot
+    [Migration("20231001093706_cr2")]
+    partial class cr2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -50,24 +53,14 @@ namespace WeatherForecast.Migrations
                         .HasColumnName("c_student_studentid")
                         .HasComment("Идентификатор студента");
 
-                    b.Property<int?>("StudentId1")
-                        .HasColumnType("integer");
-
                     b.Property<int?>("SubjectId")
                         .IsRequired()
                         .HasColumnType("int4")
                         .HasColumnName("c_student_subjectid")
                         .HasComment("Идентификатор предмета");
 
-                    b.Property<int?>("SubjectId1")
-                        .HasColumnType("integer");
-
                     b.HasKey("GradeId")
                         .HasName("pk_(TableName)_GradeId");
-
-                    b.HasIndex("StudentId1");
-
-                    b.HasIndex("SubjectId1");
 
                     b.HasIndex(new[] { "StudentId" }, "idx_(TableName)_fk_f_student_id");
 
@@ -123,9 +116,6 @@ namespace WeatherForecast.Migrations
                         .HasColumnName("c_student_groupid")
                         .HasComment("Идентификатор группы");
 
-                    b.Property<int?>("GroupId1")
-                        .HasColumnType("integer");
-
                     b.Property<string>("LastName")
                         .IsRequired()
                         .HasMaxLength(100)
@@ -142,8 +132,6 @@ namespace WeatherForecast.Migrations
 
                     b.HasKey("StudentId")
                         .HasName("pk_(TableName)_StudentId");
-
-                    b.HasIndex("GroupId1");
 
                     b.HasIndex(new[] { "GroupId" }, "idx_(TableName)_fk_f_group_id");
 
@@ -195,17 +183,11 @@ namespace WeatherForecast.Migrations
                         .HasColumnName("c_student_studentid")
                         .HasComment("Идентификатор студента");
 
-                    b.Property<int?>("StudentId1")
-                        .HasColumnType("integer");
-
                     b.Property<int?>("SubjectId")
                         .IsRequired()
                         .HasColumnType("int4")
                         .HasColumnName("c_student_subjectid")
                         .HasComment("Идентификатор предмета");
-
-                    b.Property<int?>("SubjectId1")
-                        .HasColumnType("integer");
 
                     b.Property<string>("TestCondition")
                         .IsRequired()
@@ -222,10 +204,6 @@ namespace WeatherForecast.Migrations
                     b.HasKey("TestId")
                         .HasName("pk_(TableName)_TestId");
 
-                    b.HasIndex("StudentId1");
-
-                    b.HasIndex("SubjectId1");
-
                     b.HasIndex(new[] { "StudentId" }, "idx_(TableName)_fk_f_student_id")
                         .HasDatabaseName("idx_(TableName)_fk_f_student_id1");
 
@@ -238,26 +216,18 @@ namespace WeatherForecast.Migrations
             modelBuilder.Entity("WeatherForecast.Grade", b =>
                 {
                     b.HasOne("WeatherForecast.Student", "Student")
-                        .WithMany()
+                        .WithMany("Grades")
                         .HasForeignKey("StudentId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired()
                         .HasConstraintName("fk_f_student_id");
 
-                    b.HasOne("WeatherForecast.Student", null)
-                        .WithMany("Grades")
-                        .HasForeignKey("StudentId1");
-
                     b.HasOne("WeatherForecast.Subject", "Subject")
-                        .WithMany()
+                        .WithMany("Grades")
                         .HasForeignKey("SubjectId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired()
                         .HasConstraintName("fk_f_subject_id");
-
-                    b.HasOne("WeatherForecast.Subject", null)
-                        .WithMany("Grades")
-                        .HasForeignKey("SubjectId1");
 
                     b.Navigation("Student");
 
@@ -267,15 +237,11 @@ namespace WeatherForecast.Migrations
             modelBuilder.Entity("WeatherForecast.Student", b =>
                 {
                     b.HasOne("WeatherForecast.Group", "Group")
-                        .WithMany()
+                        .WithMany("Students")
                         .HasForeignKey("GroupId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired()
                         .HasConstraintName("fk_f_group_id");
-
-                    b.HasOne("WeatherForecast.Group", null)
-                        .WithMany("Students")
-                        .HasForeignKey("GroupId1");
 
                     b.Navigation("Group");
                 });
@@ -283,26 +249,18 @@ namespace WeatherForecast.Migrations
             modelBuilder.Entity("WeatherForecast.Test", b =>
                 {
                     b.HasOne("WeatherForecast.Student", "Student")
-                        .WithMany()
+                        .WithMany("Tests")
                         .HasForeignKey("StudentId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired()
                         .HasConstraintName("fk_f_student_id");
 
-                    b.HasOne("WeatherForecast.Student", null)
-                        .WithMany("Tests")
-                        .HasForeignKey("StudentId1");
-
                     b.HasOne("WeatherForecast.Subject", "Subject")
-                        .WithMany()
+                        .WithMany("Tests")
                         .HasForeignKey("SubjectId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired()
                         .HasConstraintName("fk_f_subject_id");
-
-                    b.HasOne("WeatherForecast.Subject", null)
-                        .WithMany("Tests")
-                        .HasForeignKey("SubjectId1");
 
                     b.Navigation("Student");
 
