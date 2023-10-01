@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "qVTP2GbYsUd6w0VFrsZYzb42WXJXQiq13KXaiVuA6FNCY9UTaDQfT/9s/5cL23MYx/Ge5gnH6DDV3EqY/U1iRA==",
+  "dgSpecHash": "ndLM2SCyxKvKz0a32e/Yk8B9haqZIiZjnJAiNzdMyQ3Iz39XHEeKrLcbtps71iR70YaBsPOrwrfRoPZgmwo7xw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Divine\\source\\repos\\Новая папка\\WeatherForecast\\WeatherForecast.csproj",
+  "projectFilePath": "C:\\Users\\Divine\\source\\repos\\Neww\\WeatherForecast\\WeatherForecast.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Divine\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\Divine\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Divine\\source\\repos\\Новая папка\\WeatherForecast\\WeatherForecast.csproj": {}
+    "C:\\Users\\Divine\\source\\repos\\Neww\\WeatherForecast\\WeatherForecast.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Divine\\source\\repos\\Новая папка\\WeatherForecast\\WeatherForecast.csproj": {
+    "C:\\Users\\Divine\\source\\repos\\Neww\\WeatherForecast\\WeatherForecast.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Divine\\source\\repos\\Новая папка\\WeatherForecast\\WeatherForecast.csproj",
+        "projectUniqueName": "C:\\Users\\Divine\\source\\repos\\Neww\\WeatherForecast\\WeatherForecast.csproj",
         "projectName": "WeatherForecast",
-        "projectPath": "C:\\Users\\Divine\\source\\repos\\Новая папка\\WeatherForecast\\WeatherForecast.csproj",
+        "projectPath": "C:\\Users\\Divine\\source\\repos\\Neww\\WeatherForecast\\WeatherForecast.csproj",
         "packagesPath": "C:\\Users\\Divine\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Divine\\source\\repos\\Новая папка\\WeatherForecast\\obj\\",
+        "outputPath": "C:\\Users\\Divine\\source\\repos\\Neww\\WeatherForecast\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
