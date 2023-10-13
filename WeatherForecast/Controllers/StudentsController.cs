@@ -9,19 +9,19 @@ namespace WeatherForecast.Controllers
     public class StudentsController : ControllerBase
     {
         private readonly ILogger<StudentsController> _logger;
-        private readonly IGradeService _gradeService;
+        private readonly IGroupService _groupService;
 
-        public StudentsController(ILogger<StudentsController> logger, IGradeService gradeService)
+        public StudentsController(ILogger<StudentsController> logger, IGroupService gradeService)
         { 
         _logger = logger;
-        _gradeService = gradeService;
+        _groupService = gradeService;
         }
 
 
-        [HttpPost(Name = "GetGradeByStudent")]
+        [HttpPost(Name = "GetListOfGroups")]
         public async Task<IActionResult> GetGradesByStudentsAsync(StudentGradeFilter filter, CancellationToken cancellationToken = default)
         {
-            var grades = await _gradeService.GetGradesByStudentsAsync(filter, cancellationToken);
+            var grades = await _groupService.GetGroupsByNameAsync(filter, cancellationToken);
             return Ok(grades);
         }
     }

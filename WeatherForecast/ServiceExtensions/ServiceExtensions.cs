@@ -7,7 +7,7 @@ namespace WeatherForecast.ServiceExtensions
     {
         public static IServiceCollection AddServices(this IServiceCollection services) { 
 
-            services.AddScoped<IGradeService, GradeServices>();
+            services.AddScoped<IGroupService, GroupServices>();
 
             return services;
         }

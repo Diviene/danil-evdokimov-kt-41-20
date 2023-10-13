@@ -2,7 +2,11 @@
 {
     public class StudentGradeFilter
     {
-        public string Name { get; set; }
+        public string Specialnost { get; set; }
 
+        public int? GroupYear { get; set; }
+
+        public string DoesExist { get; set; }
+ 
     }
 }

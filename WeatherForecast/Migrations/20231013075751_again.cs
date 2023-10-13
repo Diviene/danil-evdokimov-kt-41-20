@@ -7,7 +7,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace WeatherForecast.Migrations
 {
     /// <inheritdoc />
-    public partial class createDatabase : Migration
+    public partial class again : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -18,8 +18,10 @@ namespace WeatherForecast.Migrations
                 {
                     group_id = table.Column<int>(type: "integer", nullable: false, comment: "Идентификатор группы")
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    c_student_specialnost = table.Column<string>(type: "varchar", maxLength: 100, nullable: false, comment: "Специальность"),
                     c_student_groupname = table.Column<string>(type: "varchar", maxLength: 100, nullable: false, comment: "Наименование группы"),
-                    c_student_quantity = table.Column<int>(type: "int4", nullable: false, comment: "Количество студентов")
+                    c_student_groupyear = table.Column<int>(type: "int4", maxLength: 100, nullable: false, comment: "Год формирования группы"),
+                    c_student_doesexist = table.Column<string>(type: "varchar", maxLength: 100, nullable: false, comment: "Существует ли группа")
                 },
                 constraints: table =>
                 {

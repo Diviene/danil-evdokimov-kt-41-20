@@ -5,23 +5,23 @@ using WeatherForecast.Filters.StudentFilters;
 namespace WeatherForecast.Interfaces.StudentInterfaces
 { 
     
-        public interface IGradeService
+        public interface IGroupService
         {
-            public Task<Grade[]> GetGradesByStudentsAsync(StudentGradeFilter filter, CancellationToken cancellationToken);
+            public Task<Group[]> GetGroupsByNameAsync(StudentGradeFilter filter, CancellationToken cancellationToken);
         }
 
-        public class GradeServices : IGradeService
+        public class GroupServices : IGroupService
         {
 
-            public Task<Grade[]> GetGradesByStudentsAsync(StudentGradeFilter filter, CancellationToken cancellationToken = default)
+            public Task<Group[]> GetGroupsByNameAsync(StudentGradeFilter filter, CancellationToken cancellationToken = default)
             {
-                var grades = _dbContext.Set<Grade>().Where(d => d.Student.FirstName + " " + d.Student.LastName + " " + d.Student.SecName == filter.Name).ToArrayAsync(cancellationToken);
+                var grades = _dbContext.Set<Group>().Where(d => d.Specialnost == filter.Specialnost).Where(d => d.GroupYear == filter.GroupYear).Where(d => d.DoesExist == filter.DoesExist).ToArrayAsync(cancellationToken);
                 return grades;
             }
 
             private readonly DbContext _dbContext;
 
-            public GradeServices(StudentDbContext dbContext)
+            public GroupServices(StudentDbContext dbContext)
             {
                 _dbContext = dbContext;
             }

@@ -48,7 +48,7 @@ namespace Lab3.Database.Configurations
 
             builder.ToTable(TableName)
                 .HasOne(p => p.Subject)
-                .WithMany()
+                .WithMany(a => a.Tests)
                 .HasForeignKey(P => P.SubjectId)
                 .HasConstraintName("fk_f_subject_id")
                 .OnDelete(DeleteBehavior.Cascade);
@@ -67,7 +67,7 @@ namespace Lab3.Database.Configurations
 
             builder.ToTable(TableName)
                 .HasOne(p => p.Student)
-                .WithMany()
+                .WithMany(a => a.Tests)
                 .HasForeignKey(P => P.StudentId)
                 .HasConstraintName("fk_f_student_id")
                 .OnDelete(DeleteBehavior.Cascade);

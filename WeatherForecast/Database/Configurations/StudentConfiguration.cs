@@ -48,7 +48,7 @@ namespace Lab3.Database.Configurations
 
             builder.ToTable(TableName)
                 .HasOne(p => p.Group)
-                .WithMany()
+                .WithMany(a => a.Students)
                 .HasForeignKey(P => P.GroupId)
                 .HasConstraintName("fk_f_group_id")
                 .OnDelete(DeleteBehavior.Cascade);
