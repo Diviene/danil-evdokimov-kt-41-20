@@ -2,6 +2,7 @@ using Lab3.Database;
 using Microsoft.EntityFrameworkCore;
 using NLog;
 using NLog.Web;
+using WeatherForecast.Middlewares;
 using WeatherForecast.ServiceExtensions;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -33,6 +34,8 @@ try
         app.UseSwagger();
         app.UseSwaggerUI();
     }
+
+    app.UseMiddleware<ExceptionHandlerMiddleware>();
 
     app.UseAuthorization();
 
