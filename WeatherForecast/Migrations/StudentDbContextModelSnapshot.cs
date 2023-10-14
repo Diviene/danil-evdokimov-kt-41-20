@@ -120,6 +120,13 @@ namespace WeatherForecast.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int?>("StudentId"));
 
+                    b.Property<DateTime?>("DateOfBirth")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("timestamp")
+                        .HasColumnName("c_student_dateofbirth")
+                        .HasComment("Идентификатор группы");
+
                     b.Property<string>("FirstName")
                         .IsRequired()
                         .HasMaxLength(100)

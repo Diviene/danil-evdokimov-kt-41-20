@@ -40,6 +40,12 @@ namespace Lab3.Database.Configurations
                 .HasColumnType(ColumnType.String).HasMaxLength(100)
                 .HasComment("Отчество студента");
 
+            builder.Property(p => p.DateOfBirth)
+                .IsRequired()
+                .HasColumnName("c_student_dateofbirth")
+                .HasColumnType(ColumnType.Date).HasMaxLength(100)
+                .HasComment("Идентификатор группы");
+
             builder.Property(p => p.GroupId)
                 .IsRequired()
                 .HasColumnName("c_student_groupid")
