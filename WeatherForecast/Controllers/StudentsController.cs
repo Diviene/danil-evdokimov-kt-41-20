@@ -19,7 +19,7 @@ namespace WeatherForecast.Controllers
 
 
         [HttpPost(Name = "GetListOfGroups")]
-        public async Task<IActionResult> GetGradesByStudentsAsync(StudentGradeFilter filter, CancellationToken cancellationToken = default)
+        public async Task<IActionResult> GetGradesByStudentsAsync(GroupFilter filter, CancellationToken cancellationToken = default)
         {
             var grades = await _groupService.GetGroupsByNameAsync(filter, cancellationToken);
             return Ok(grades);

@@ -58,7 +58,7 @@ namespace danil_evdokimov_kt_41_20.Tests
             await ctx.SaveChangesAsync();
 
             // Act
-            var filter = new WeatherForecast.Filters.StudentFilters.StudentGradeFilter
+            var filter = new WeatherForecast.Filters.StudentFilters.GroupFilter
             {
                 Specialnost = "Прикладная информатика",
                 GroupYear = 2020,

@@ -25,25 +25,25 @@ namespace Lab3.Database.Configurations
 
             builder.Property(p => p.Specialnost)
                 .IsRequired()
-                .HasColumnName("c_student_specialnost")
+                .HasColumnName("c_group_specialnost")
                 .HasColumnType(ColumnType.String).HasMaxLength(100)
                 .HasComment("Специальность");
 
             builder.Property(p => p.GroupName)
                 .IsRequired()
-                .HasColumnName("c_student_groupname")
+                .HasColumnName("c_group_groupname")
                 .HasColumnType(ColumnType.String).HasMaxLength(100)
                 .HasComment("Наименование группы");
 
             builder.Property(p => p.GroupYear)
                 .IsRequired()
-                .HasColumnName("c_student_groupyear")
+                .HasColumnName("c_group_groupyear")
                 .HasColumnType(ColumnType.Int).HasMaxLength(100)
                 .HasComment("Год формирования группы");
 
             builder.Property(p => p.DoesExist)
                 .IsRequired()
-                .HasColumnName("c_student_doesexist")
+                .HasColumnName("c_group_doesexist")
                 .HasColumnType(ColumnType.String).HasMaxLength(100)
                 .HasComment("Существует ли группа");
         }

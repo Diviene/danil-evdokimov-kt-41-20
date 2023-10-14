@@ -1,6 +1,6 @@
 ﻿namespace WeatherForecast.Filters.StudentFilters
 {
-    public class StudentGradeFilter
+    public class GroupFilter
     {
         public string Specialnost { get; set; }
 
