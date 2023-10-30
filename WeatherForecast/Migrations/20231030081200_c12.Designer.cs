@@ -12,8 +12,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace WeatherForecast.Migrations
 {
     [DbContext(typeof(StudentDbContext))]
-    [Migration("20231014200304_cc")]
-    partial class cc
+    [Migration("20231030081200_c12")]
+    partial class c12
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

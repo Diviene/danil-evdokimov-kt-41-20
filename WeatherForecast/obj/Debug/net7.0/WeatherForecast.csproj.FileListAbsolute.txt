@@ -383,3 +383,4 @@ C:\Users\Divine\Source\Repos\danil-evdokimov-kt-41-20\WeatherForecast\obj\Debug\
 C:\Users\Divine\Source\Repos\danil-evdokimov-kt-41-20\WeatherForecast\obj\Debug\net7.0\WeatherForecast.genruntimeconfig.cache
 C:\Users\Divine\Source\Repos\danil-evdokimov-kt-41-20\WeatherForecast\obj\Debug\net7.0\ref\WeatherForecast.dll
 C:\Users\Divine\Source\Repos\danil-evdokimov-kt-41-20\WeatherForecast\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.InMemory.dll
+C:\Users\d-evdokimov\source\repos\danil-evdokimov-kt-41-20\WeatherForecast\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.InMemory.dll

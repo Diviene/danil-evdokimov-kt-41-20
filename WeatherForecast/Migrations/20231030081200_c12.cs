@@ -6,7 +6,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace WeatherForecast.Migrations
 {
     /// <inheritdoc />
-    public partial class cc : Migration
+    public partial class c12 : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
