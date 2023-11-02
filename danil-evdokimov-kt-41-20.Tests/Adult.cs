@@ -8,12 +8,12 @@ namespace danil_evdokimov_kt_41_20.Tests
             [Fact]
             public void IsAdultTrueWhenStudentIsOver18()
             {
-                // Arrange
-                var birthDateString = DateTime.Now.AddYears(-20).ToString("yyyy-MM-dd"); // студенту 20 лет
+            // Arrange
+            var birthDateString = "1999-05-01"; // студенту больше 18 лет
 
                 // Act
                 var isAdult = IsAdult(birthDateString);
-
+            
                 // Assert
                 Assert.True(isAdult, "Студент является совершеннолетним");
             }
