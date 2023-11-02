@@ -1,14 +1,13 @@
 ﻿using Lab3.Database.Configurations;
 using Microsoft.EntityFrameworkCore;
 using WeatherForecast;
- 
+
 namespace Lab3.Database
 {
     public class StudentDbContext : DbContext
     {
 
         public DbSet<Group> Groups { get; set; }
-
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
 
@@ -20,5 +19,5 @@ namespace Lab3.Database
 
         }
     }
-}
 
+}

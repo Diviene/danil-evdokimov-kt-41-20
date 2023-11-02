@@ -36,21 +36,21 @@ namespace danil_evdokimov_kt_41_20.Tests
                     GroupName = "КТ-41-20",
                     Specialnost = "Прикладная информатика",
                     GroupYear = 2020,
-                    DoesExist = "Да"
+                    DoesExist = true
                 },
                 new Group
                 {
                     GroupName = "КТ-42-20",
                     Specialnost = "Прикладная информатика",
                     GroupYear = 2020,
-                    DoesExist = "Да"
+                    DoesExist = true
                 },
                 new Group
                 {
                     GroupName = "ИВТ-13-18",
                     Specialnost = "Вычислительные машины",
                     GroupYear = 2018,
-                    DoesExist = "Нет"
+                    DoesExist = false
                 }
             };
             await ctx.Set<Group>().AddRangeAsync(groups);
@@ -62,7 +62,7 @@ namespace danil_evdokimov_kt_41_20.Tests
             {
                 Specialnost = "Прикладная информатика",
                 GroupYear = 2020,
-                DoesExist = "Да"
+                DoesExist = true
             };
             var studentsResult = await studentService.GetGroupsByNameAsync(filter, CancellationToken.None);
 

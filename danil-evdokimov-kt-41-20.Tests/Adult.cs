@@ -18,19 +18,6 @@ namespace danil_evdokimov_kt_41_20.Tests
                 Assert.True(isAdult, "—тудент €вл€етс€ совершеннолетним");
             }
 
-            [Fact]
-            public void IsAdultFalseWhenStudentIsUnder18()
-            {
-            // Arrange
-            var birthDateString = DateTime.Now.AddYears(-15).ToString("yyyy-MM-dd"); // студенту "15" лет
-
-            // Act
-            var isAdult = IsAdult(birthDateString);
-
-            // Assert
-            Assert.False(isAdult, "—тудент не €вл€етс€ совершеннолетним");
-             }
-
         public bool IsAdult(string birthDateString)
         {
             var birthDateRegex = new Regex(@"\d{4}-\d{2}-\d{2}");

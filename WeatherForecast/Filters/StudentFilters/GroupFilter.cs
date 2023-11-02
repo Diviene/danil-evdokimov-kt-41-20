@@ -6,7 +6,7 @@
 
         public int? GroupYear { get; set; }
 
-        public string DoesExist { get; set; }
+        public bool DoesExist { get; set; }
  
     }
 }
