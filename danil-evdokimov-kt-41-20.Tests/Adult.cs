@@ -9,7 +9,7 @@ namespace danil_evdokimov_kt_41_20.Tests
             public void IsAdultTrueWhenStudentIsOver18()
             {
             // Arrange
-            var birthDateString = "1999-05-01"; // студенту больше 18 лет
+            var birthDateString = "1999-05-01";
 
                 // Act
                 var isAdult = IsAdult(birthDateString);

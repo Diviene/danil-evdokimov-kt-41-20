@@ -22,7 +22,9 @@ namespace WeatherForecast.Interfaces.StudentInterfaces
 
         public Task<Group[]> GetGroupsByNameAsync(GroupFilter filter, CancellationToken cancellationToken = default)
             {
-                var grades = _dbContext.Set<Group>().Where(d => d.Specialnost == filter.Specialnost).Where(d => d.GroupYear == filter.GroupYear).Where(d => d.DoesExist == filter.DoesExist).ToArrayAsync(cancellationToken);
+                var grades = _dbContext.Set<Group>().Where(d => d.Specialnost == filter.Specialnost && 
+                d.GroupYear == filter.GroupYear && d.DoesExist == filter.DoesExist).
+                ToArrayAsync(cancellationToken);
                 return grades;
             }
     }

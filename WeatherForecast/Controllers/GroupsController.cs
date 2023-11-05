@@ -23,7 +23,8 @@ namespace WeatherForecast.Controllers
 
 
         [HttpPost("GetListOfGroups", Name = "GetListOfGroups")]
-        public async Task<IActionResult> GetGroupsBySpecialnostAsync(GroupFilter filter, CancellationToken cancellationToken = default)
+        public async Task<IActionResult> GetGroupsBySpecialnostAsync(GroupFilter filter, CancellationToken 
+            cancellationToken = default)
         {
             var grades = await _groupService.GetGroupsByNameAsync(filter, cancellationToken);
             return Ok(grades);
