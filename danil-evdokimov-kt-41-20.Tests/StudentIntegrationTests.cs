@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using WeatherForecast;
 using WeatherForecast.Interfaces.StudentInterfaces;
+using WeatherForecast.Models;
 
 namespace danil_evdokimov_kt_41_20.Tests
 {
@@ -34,33 +35,49 @@ namespace danil_evdokimov_kt_41_20.Tests
                 new Group
                 {
                     GroupName = "КТ-41-20",
-                    Specialnost = "Прикладная информатика",
                     GroupYear = 2020,
-                    DoesExist = true
+                    DoesExist = true,
+                    SpecialnostId = 1
                 },
                 new Group
                 {
                     GroupName = "КТ-42-20",
-                    Specialnost = "Прикладная информатика",
                     GroupYear = 2020,
-                    DoesExist = true
+                    DoesExist = true,
+                    SpecialnostId = 1
                 },
                 new Group
                 {
                     GroupName = "ИВТ-13-18",
-                    Specialnost = "Вычислительные машины",
                     GroupYear = 2018,
-                    DoesExist = false
+                    DoesExist = false,
+                    SpecialnostId = 2
+                    
                 }
             };
             await ctx.Set<Group>().AddRangeAsync(groups);
+
+            var spec = new List<Specialnost>
+            {
+                new Specialnost
+                {
+                    SpecialnostId = 1,
+                    SpecialnostName = "Прикладная информатика"
+                },
+                new Specialnost
+                {
+                    SpecialnostId = 2,
+                    SpecialnostName = "Вычислительные машины"
+                }
+            };
+            await ctx.Set<Specialnost>().AddRangeAsync(spec);
 
             await ctx.SaveChangesAsync();
 
             // Act
             var filter = new WeatherForecast.Filters.StudentFilters.GroupFilter
             {
-                Specialnost = "Прикладная информатика",
+                SpecialnostName = "Прикладная информатика",
                 GroupYear = 2020,
                 DoesExist = true
             };

@@ -53,8 +53,6 @@ namespace WeatherForecast.Controllers
                 return NotFound();
             }
 
-            existingGroup.Specialnost = updatedGroup.Specialnost;
-            existingGroup.GroupYear = updatedGroup.GroupYear;
             existingGroup.DoesExist = updatedGroup.DoesExist;
 
             _context.SaveChanges();

@@ -23,12 +23,6 @@ namespace Lab3.Database.Configurations
                 .HasColumnName("group_id")
                 .HasComment("Идентификатор группы");
 
-            builder.Property(p => p.Specialnost)
-                .IsRequired()
-                .HasColumnName("c_group_specialnost")
-                .HasColumnType(ColumnType.String).HasMaxLength(100)
-                .HasComment("Специальность");
-
             builder.Property(p => p.GroupName)
                 .IsRequired()
                 .HasColumnName("c_group_groupname")
@@ -44,8 +38,27 @@ namespace Lab3.Database.Configurations
             builder.Property(p => p.DoesExist)
                 .IsRequired()
                 .HasColumnName("c_group_doesexist")
-                .HasColumnType(ColumnType.String).HasMaxLength(100)
+                .HasColumnType(ColumnType.Bool)
                 .HasComment("Существует ли группа");
+
+            builder.Property(p => p.SpecialnostId)
+                .IsRequired()
+                .HasColumnName("c_group_specialnostid")
+                .HasColumnType(ColumnType.Int)
+                .HasComment("ИД специальности");
+
+            builder.ToTable(TableName)
+            .HasOne(p => p.Specialnosts)                 
+            .WithMany(p => p.Groups)                                   
+            .HasForeignKey(p => p.SpecialnostId)          
+            .HasConstraintName("fk_f_specialnost_id")   
+            .OnDelete(DeleteBehavior.Cascade);           
+
+            builder.ToTable(TableName)
+                .HasIndex(p => p.SpecialnostId, $"idx_{TableName}_fk_f_specialnost_id");
+
+            builder.Navigation(p => p.Specialnosts)
+                .AutoInclude();
         }
     }
 }

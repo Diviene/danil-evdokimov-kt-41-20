@@ -32,10 +32,8 @@ namespace WeatherForecast.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int?>("GroupId"));
 
-                    b.Property<string>("DoesExist")
-                        .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("varchar")
+                    b.Property<bool>("DoesExist")
+                        .HasColumnType("bool")
                         .HasColumnName("c_group_doesexist")
                         .HasComment("Существует ли группа");
 
@@ -53,17 +51,57 @@ namespace WeatherForecast.Migrations
                         .HasColumnName("c_group_groupyear")
                         .HasComment("Год формирования группы");
 
-                    b.Property<string>("Specialnost")
-                        .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("varchar")
-                        .HasColumnName("c_group_specialnost")
-                        .HasComment("Специальность");
+                    b.Property<int>("SpecialnostId")
+                        .HasColumnType("int4")
+                        .HasColumnName("c_group_specialnostid")
+                        .HasComment("ИД специальности");
 
                     b.HasKey("GroupId")
                         .HasName("pk_(TableName)_GroupId");
 
-                    b.ToTable("Groups");
+                    b.HasIndex(new[] { "SpecialnostId" }, "idx_Group_fk_f_specialnost_id");
+
+                    b.ToTable("Group", (string)null);
+                });
+
+            modelBuilder.Entity("WeatherForecast.Models.Specialnost", b =>
+                {
+                    b.Property<int>("SpecialnostId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer")
+                        .HasColumnName("specialnost_id")
+                        .HasComment("Идентификатор специальности");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("SpecialnostId"));
+
+                    b.Property<string>("SpecialnostName")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("varchar")
+                        .HasColumnName("c_group_specialnostname")
+                        .HasComment("Наименование специальности");
+
+                    b.HasKey("SpecialnostId")
+                        .HasName("pk_(TableName)_SpecialnostId");
+
+                    b.ToTable("Specialnosts");
+                });
+
+            modelBuilder.Entity("WeatherForecast.Group", b =>
+                {
+                    b.HasOne("WeatherForecast.Models.Specialnost", "Specialnosts")
+                        .WithMany("Groups")
+                        .HasForeignKey("SpecialnostId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired()
+                        .HasConstraintName("fk_f_specialnost_id");
+
+                    b.Navigation("Specialnosts");
+                });
+
+            modelBuilder.Entity("WeatherForecast.Models.Specialnost", b =>
+                {
+                    b.Navigation("Groups");
                 });
 #pragma warning restore 612, 618
         }

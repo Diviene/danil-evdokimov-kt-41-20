@@ -2,7 +2,7 @@
 {
     public class GroupFilter
     {
-        public string Specialnost { get; set; }
+        public string SpecialnostName { get; set; }
 
         public int? GroupYear { get; set; }
 
