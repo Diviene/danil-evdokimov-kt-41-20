@@ -11,7 +11,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace WeatherForecast.Migrations
 {
-    [DbContext(typeof(StudentDbContext))]
+    [DbContext(typeof(GroupDbContext))]
     [Migration("20231105205433_xxcxc")]
     partial class xxcxc
     {

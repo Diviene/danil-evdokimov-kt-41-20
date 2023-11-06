@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "cMZE7XW2ftBXdxHxLgEgt5zI8SEobrgSm5d/uxZ93PQnEr+qALkDMWidr26l78/RgoFygKCctFCz07KQxhpHbQ==",
+  "dgSpecHash": "JSr2f33jj32mS9W5BtkbAwbXcHmR6chya+jRCw3HnzzFg6GofAvydm287i5THPQTD8jkzHmE+zak6zy5eRsL7w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Divine\\source\\repos\\danil-evdokimov-kt-41-20\\WeatherForecast\\WeatherForecast.csproj",
+  "projectFilePath": "C:\\Users\\Divine\\source\\repos\\danil-evdokimov-kt-41-20\\WeatherForecast\\danil-evdokimov-kt-41-20.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Divine\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\Divine\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

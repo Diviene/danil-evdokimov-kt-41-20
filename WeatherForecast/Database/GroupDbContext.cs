@@ -6,7 +6,7 @@ using WeatherForecast.Models;
 
 namespace Lab3.Database
 {
-    public class StudentDbContext : DbContext
+    public class GroupDbContext : DbContext
     {
 
         public DbSet<Group> Groups { get; set; }
@@ -19,7 +19,7 @@ namespace Lab3.Database
             modelBuilder.ApplyConfiguration(new SpecialnostConfiguration());
         }
 
-        public StudentDbContext(DbContextOptions<StudentDbContext> options) : base(options)
+        public GroupDbContext(DbContextOptions<GroupDbContext> options) : base(options)
         {
 
         }

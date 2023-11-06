@@ -5,11 +5,8 @@ C:\Users\Divine\Source\Repos\danil-evdokimov-kt-41-20\danil-evdokimov-kt-41-20.T
 C:\Users\Divine\Source\Repos\danil-evdokimov-kt-41-20\danil-evdokimov-kt-41-20.Tests\obj\Debug\net7.0\danil-evdokimov-kt-41-20.Tests.AssemblyInfo.cs
 C:\Users\Divine\Source\Repos\danil-evdokimov-kt-41-20\danil-evdokimov-kt-41-20.Tests\obj\Debug\net7.0\danil-evdokimov-kt-41-20.Tests.csproj.CoreCompileInputs.cache
 C:\Users\Divine\Source\Repos\danil-evdokimov-kt-41-20\danil-evdokimov-kt-41-20.Tests\bin\Debug\net7.0\testhost.dll
-C:\Users\Divine\Source\Repos\danil-evdokimov-kt-41-20\danil-evdokimov-kt-41-20.Tests\bin\Debug\net7.0\WeatherForecast.deps.json
-C:\Users\Divine\Source\Repos\danil-evdokimov-kt-41-20\danil-evdokimov-kt-41-20.Tests\bin\Debug\net7.0\WeatherForecast.runtimeconfig.json
 C:\Users\Divine\Source\Repos\danil-evdokimov-kt-41-20\danil-evdokimov-kt-41-20.Tests\bin\Debug\net7.0\appsettings.Development.json
 C:\Users\Divine\Source\Repos\danil-evdokimov-kt-41-20\danil-evdokimov-kt-41-20.Tests\bin\Debug\net7.0\appsettings.json
-C:\Users\Divine\Source\Repos\danil-evdokimov-kt-41-20\danil-evdokimov-kt-41-20.Tests\bin\Debug\net7.0\WeatherForecast.exe
 C:\Users\Divine\Source\Repos\danil-evdokimov-kt-41-20\danil-evdokimov-kt-41-20.Tests\bin\Debug\net7.0\testhost.exe
 C:\Users\Divine\Source\Repos\danil-evdokimov-kt-41-20\danil-evdokimov-kt-41-20.Tests\bin\Debug\net7.0\xunit.runner.visualstudio.dotnetcore.testadapter.dll
 C:\Users\Divine\Source\Repos\danil-evdokimov-kt-41-20\danil-evdokimov-kt-41-20.Tests\bin\Debug\net7.0\xunit.runner.reporters.netcoreapp10.dll
@@ -152,8 +149,6 @@ C:\Users\Divine\Source\Repos\danil-evdokimov-kt-41-20\danil-evdokimov-kt-41-20.T
 C:\Users\Divine\Source\Repos\danil-evdokimov-kt-41-20\danil-evdokimov-kt-41-20.Tests\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
 C:\Users\Divine\Source\Repos\danil-evdokimov-kt-41-20\danil-evdokimov-kt-41-20.Tests\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\Divine\Source\Repos\danil-evdokimov-kt-41-20\danil-evdokimov-kt-41-20.Tests\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
-C:\Users\Divine\Source\Repos\danil-evdokimov-kt-41-20\danil-evdokimov-kt-41-20.Tests\bin\Debug\net7.0\WeatherForecast.dll
-C:\Users\Divine\Source\Repos\danil-evdokimov-kt-41-20\danil-evdokimov-kt-41-20.Tests\bin\Debug\net7.0\WeatherForecast.pdb
 C:\Users\Divine\Source\Repos\danil-evdokimov-kt-41-20\danil-evdokimov-kt-41-20.Tests\obj\Debug\net7.0\danil-evdokimov-kt-41-20.Tests.csproj.CopyComplete
 C:\Users\Divine\Source\Repos\danil-evdokimov-kt-41-20\danil-evdokimov-kt-41-20.Tests\obj\Debug\net7.0\danil-evdokimov-kt-41-20.Tests.dll
 C:\Users\Divine\Source\Repos\danil-evdokimov-kt-41-20\danil-evdokimov-kt-41-20.Tests\obj\Debug\net7.0\refint\danil-evdokimov-kt-41-20.Tests.dll
@@ -322,3 +317,8 @@ C:\Users\d-evdokimov\source\repos\danil-evdokimov-kt-41-20\danil-evdokimov-kt-41
 C:\Users\d-evdokimov\source\repos\danil-evdokimov-kt-41-20\danil-evdokimov-kt-41-20.Tests\obj\Debug\net7.0\danil-evdokimov-kt-41-20.Tests.pdb
 C:\Users\d-evdokimov\source\repos\danil-evdokimov-kt-41-20\danil-evdokimov-kt-41-20.Tests\obj\Debug\net7.0\danil-evdokimov-kt-41-20.Tests.genruntimeconfig.cache
 C:\Users\d-evdokimov\source\repos\danil-evdokimov-kt-41-20\danil-evdokimov-kt-41-20.Tests\obj\Debug\net7.0\ref\danil-evdokimov-kt-41-20.Tests.dll
+C:\Users\Divine\source\repos\danil-evdokimov-kt-41-20\danil-evdokimov-kt-41-20.Tests\bin\Debug\net7.0\danil-evdokimov-kt-41-20.deps.json
+C:\Users\Divine\source\repos\danil-evdokimov-kt-41-20\danil-evdokimov-kt-41-20.Tests\bin\Debug\net7.0\danil-evdokimov-kt-41-20.runtimeconfig.json
+C:\Users\Divine\source\repos\danil-evdokimov-kt-41-20\danil-evdokimov-kt-41-20.Tests\bin\Debug\net7.0\danil-evdokimov-kt-41-20.exe
+C:\Users\Divine\source\repos\danil-evdokimov-kt-41-20\danil-evdokimov-kt-41-20.Tests\bin\Debug\net7.0\danil-evdokimov-kt-41-20.dll
+C:\Users\Divine\source\repos\danil-evdokimov-kt-41-20\danil-evdokimov-kt-41-20.Tests\bin\Debug\net7.0\danil-evdokimov-kt-41-20.pdb

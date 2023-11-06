@@ -13,13 +13,13 @@ using WeatherForecast.Models;
 
 namespace danil_evdokimov_kt_41_20.Tests
 {
-    public class StudentIntegrationTests
+    public class GroupIntegrationTest
     {
-        public readonly DbContextOptions<StudentDbContext> _dbContextOptions;
+        public readonly DbContextOptions<GroupDbContext> _dbContextOptions;
 
-        public StudentIntegrationTests()
+        public GroupIntegrationTest()
         {
-            _dbContextOptions = new DbContextOptionsBuilder<StudentDbContext>()
+            _dbContextOptions = new DbContextOptionsBuilder<GroupDbContext>()
                 .UseInMemoryDatabase(databaseName: "student2")
                 .Options;
         }
@@ -28,7 +28,7 @@ namespace danil_evdokimov_kt_41_20.Tests
         public async Task GetGroupsAsync_KT4120_TwoObjects()
         {
             // Arrange
-            var ctx = new StudentDbContext(_dbContextOptions);
+            var ctx = new GroupDbContext(_dbContextOptions);
             var studentService = new GroupServices(ctx);
             var groups = new List<Group>
             {

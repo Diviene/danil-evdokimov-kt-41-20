@@ -25,7 +25,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\WeatherForecast\WeatherForecast.csproj" />
+    <ProjectReference Include="..\WeatherForecast\danil-evdokimov-kt-41-20.csproj" />
   </ItemGroup>
 
 </Project>

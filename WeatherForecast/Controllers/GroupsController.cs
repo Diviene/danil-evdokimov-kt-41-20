@@ -12,9 +12,9 @@ namespace WeatherForecast.Controllers
     {
         private readonly ILogger<GroupsController> _logger;
         private readonly IGroupService _groupService;
-        private StudentDbContext _context;
+        private GroupDbContext _context;
 
-        public GroupsController(ILogger<GroupsController> logger, IGroupService gradeService, StudentDbContext context)
+        public GroupsController(ILogger<GroupsController> logger, IGroupService gradeService, GroupDbContext context)
         {
             _logger = logger;
             _groupService = gradeService;

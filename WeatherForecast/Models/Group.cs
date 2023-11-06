@@ -17,6 +17,11 @@ namespace WeatherForecast
 
         public Specialnost? Specialnosts { get; set; }
 
+
+        public bool IsValidGroupName() // Проверка формата ввода названия группы
+        {
+            return Regex.Match(GroupName, @"^[А-Я]-[0-9]{3}-[0-9]{2}$").Success;
+        }
     }
 
 }

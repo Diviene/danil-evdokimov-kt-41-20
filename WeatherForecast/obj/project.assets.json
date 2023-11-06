@@ -3756,9 +3756,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Divine\\source\\repos\\danil-evdokimov-kt-41-20\\WeatherForecast\\WeatherForecast.csproj",
-      "projectName": "WeatherForecast",
-      "projectPath": "C:\\Users\\Divine\\source\\repos\\danil-evdokimov-kt-41-20\\WeatherForecast\\WeatherForecast.csproj",
+      "projectUniqueName": "C:\\Users\\Divine\\source\\repos\\danil-evdokimov-kt-41-20\\WeatherForecast\\danil-evdokimov-kt-41-20.csproj",
+      "projectName": "danil-evdokimov-kt-41-20",
+      "projectPath": "C:\\Users\\Divine\\source\\repos\\danil-evdokimov-kt-41-20\\WeatherForecast\\danil-evdokimov-kt-41-20.csproj",
       "packagesPath": "C:\\Users\\Divine\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Divine\\source\\repos\\danil-evdokimov-kt-41-20\\WeatherForecast\\obj\\",
       "projectStyle": "PackageReference",

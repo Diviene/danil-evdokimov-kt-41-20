@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34024.191
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WeatherForecast", "WeatherForecast\WeatherForecast.csproj", "{06D9D5EC-6298-4B7F-A3B9-0FD6E13224D9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "danil-evdokimov-kt-41-20", "WeatherForecast\danil-evdokimov-kt-41-20.csproj", "{06D9D5EC-6298-4B7F-A3B9-0FD6E13224D9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "danil-evdokimov-kt-41-20.Tests", "danil-evdokimov-kt-41-20.Tests\danil-evdokimov-kt-41-20.Tests.csproj", "{E5F7BB7F-5D56-4D0D-968A-B0898B571DF7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "danil-evdokimov-kt-41-20.Tests", "danil-evdokimov-kt-41-20.Tests\danil-evdokimov-kt-41-20.Tests.csproj", "{E5F7BB7F-5D56-4D0D-968A-B0898B571DF7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

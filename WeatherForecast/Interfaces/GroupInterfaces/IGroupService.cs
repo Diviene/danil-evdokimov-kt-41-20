@@ -16,7 +16,7 @@ namespace WeatherForecast.Interfaces.StudentInterfaces
 
         private readonly DbContext _dbContext;
 
-        public GroupServices(StudentDbContext dbContext)
+        public GroupServices(GroupDbContext dbContext)
         {
             _dbContext = dbContext;
         }
